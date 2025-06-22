@@ -6,11 +6,20 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
-<body>
-    
+<body>    
     <div class="container">
         <div class="row justify-content-center pt-5">
             <div class="col-sm-4">
+                <?php
+                session_start();
+                if(isset($_SESSION['error'])){
+                    ?>
+                    <div class="alert alert-danger"><?php echo $_SESSION['error'] ?></div>
+                    <?php
+                    unset($_SESSION['error']);
+                }
+                ?>
+
                 <h3 class="text-center">Signin to your account</h3>
                 <div class="card shadow">
                     <div class="card-body">
