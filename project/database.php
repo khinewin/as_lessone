@@ -1,12 +1,9 @@
 <?php 
-
 class Database{
     public $db_name="php_project";
     public $db_user="root";
     public $db_pass="";
     public $db_host="localhost";
-
-
 
     public function connect(){
         $options=[
@@ -17,12 +14,13 @@ class Database{
         //mysqli, pdo
         try{
             $db=new PDO($dsn, $this->db_user, $this->db_pass, $options );
-            echo "Connected to database";
+            return $db;
+           // echo "Connected to database";
         }catch(PDOException $e){
             echo "Connection failed to database.". $e->getMessage();
         }
     }
 }
 
-$db=new Database();
-$db->connect();
+//$db=new Database();
+//$db->connect();
