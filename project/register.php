@@ -29,10 +29,14 @@
         <div class="row justify-content-center">
             <div class="col-sm-6 col-md-4 mt-5">
                 <h2 class="text-center text-primary">Project</h2>
-                <div>Login to continued your session.</div>
+                <div>Sginup new user account.</div>
                 <div class="card shadow">
                     <div class="card-body">
                         <form action="">
+                            <div class="form-group mb-3">
+                                <label for="name">Name</label>
+                                <input id="name" type="text" class="form-control" name="name">
+                            </div>
                             <div class="form-group mb-3">
                                 <label for="email">E-mail</label>
                                 <input id="email" type="email" class="form-control" name="email">
@@ -41,14 +45,18 @@
                                 <label for="password">Password</label>
                                 <input id="password" type="password" class="form-control" name="password">
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="confirm_password">Confirm Password</label>
+                                <input id="confirm_password" type="password" class="form-control" name="confirm_password">
+                            </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-lg">Signin</button>
+                                <button type="submit" class="btn btn-primary btn-lg">Signup</button>
                             </div>
                         </form>
 
                     </div>
                 </div>
-                <div>Don't has an account ? <a href="register.php">Sign up now</a></div>
+                <div>Already have an account ? <a href="index.php">Sign in now</a></div>
             </div>
         </div>
     </div>
