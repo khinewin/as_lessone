@@ -11,7 +11,6 @@ if(isset($_SESSION['success_msg'])){
 }
 ?>
 
-
 <?php 
 if(isset($_SESSION['error_msg'])){
     ?>

@@ -28,11 +28,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-6 col-md-4 mt-5">
+                <?php include("msg.php"); ?>
                 <h2 class="text-center text-primary">Project</h2>
                 <div>Sginup new user account.</div>
                 <div class="card shadow">
                     <div class="card-body">
-                        <form action="">
+                        <form action="post-register.php" method="post">
                             <div class="form-group mb-3">
                                 <label for="name">Name</label>
                                 <input id="name" type="text" class="form-control" name="name">
