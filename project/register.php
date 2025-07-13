@@ -19,7 +19,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Login</title>
+    <title>Project Signup</title>
     <link rel="stylesheet" href="bst/css/bootstrap.min.css">
 </head>
 <body>
