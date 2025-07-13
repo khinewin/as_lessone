@@ -2,10 +2,13 @@
 include "database.php";
 
 class Process{
-   
-    public function create(){
+    public $db=null;
+   public function __construct()
+   {
         $conn=new Database();
-        $db=$conn->connect();
+        $this->db=$conn->connect();
+   }
+    public function create(){    
 
         $name="mgmg";
         $email="mgmg@gmail.com";
@@ -13,10 +16,15 @@ class Process{
 
         $query="insert into users (name, email, password) 
         values (:name, :email, :password)";
-        $stmt=$db->prepare($query);
+        $stmt=$this->db->prepare($query);
         $stmt->execute([":name"=>$name, ":email"=>$email, ":password"=>$password]);
+    }
+    function getUsers(){
+        $query="select * from users";
+        $stmt=$this->db->query($query);
+        return $stmt->fetchAll();
     }
 }
 
 $p=new Process();
-$p->create();
+var_dump($p->getUsers());

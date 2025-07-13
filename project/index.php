@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="bst/css/bootstrap.min.css">
 </head>
 <body>
+<?php include("navbar.php") ?>
 
     <div class="container">
         <div class="row justify-content-center">
@@ -31,7 +32,6 @@
                 <div>Login to continued your session.</div>
                 <div class="card shadow">
                     <div class="card-body">
-
                         <form action="">
                             <div class="form-group mb-3">
                                 <label for="email">E-mail</label>
