@@ -10,6 +10,16 @@ class Process{
    }
 
    public function register($name, $email, $pass){
+
+        $old_query="select email from users where email='$email'";
+        $old_result=$this->db->query($old_query);
+        $result=$old_result->fetch();
+        if($result){
+            $_SESSION['error_msg']="The selected email is already token.";
+            header("location: register.php");
+            return ;
+        }
+
         $query="insert into users (name, email, password) values (:name, :email, :password)";
         $stmt=$this->db->prepare($query);
         $pass_hash=password_hash($pass, PASSWORD_BCRYPT);

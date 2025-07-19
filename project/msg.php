@@ -8,6 +8,7 @@ if(isset($_SESSION['success_msg'])){
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <?php
+    unset($_SESSION['success_msg']);
 }
 ?>
 
@@ -19,6 +20,7 @@ if(isset($_SESSION['error_msg'])){
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <?php
+    unset($_SESSION['error_msg']);
 }
 ?>
 
