@@ -18,25 +18,5 @@ class Process{
         header("location: register.php");
    }
 
-   //md5, sha1, bcrypt
-
-
-
-
-    public function create(){    
-
-        $name="mgmg";
-        $email="mgmg@gmail.com";
-        $password="password";
-
-        $query="insert into users (name, email, password) 
-        values (:name, :email, :password)";
-        $stmt=$this->db->prepare($query);
-        $stmt->execute([":name"=>$name, ":email"=>$email, ":password"=>$password]);
-    }
-    function getUsers(){
-        $query="select * from users";
-        $stmt=$this->db->query($query);
-        return $stmt->fetchAll();
-    }
+   //md5, sha1, bcrypt    
 }
