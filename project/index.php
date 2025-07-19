@@ -28,11 +28,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-6 col-md-4 mt-5">
+                <?php include("msg.php") ?>
                 <h2 class="text-center text-primary">Project</h2>
                 <div>Login to continued your session.</div>
                 <div class="card shadow">
                     <div class="card-body">
-                        <form action="">
+                        <form action="post-login.php" method="post">
                             <div class="form-group mb-3">
                                 <label for="email">E-mail</label>
                                 <input id="email" type="email" class="form-control" name="email">

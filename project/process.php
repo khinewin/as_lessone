@@ -8,7 +8,26 @@ class Process{
         $conn=new Database();
         $this->db=$conn->connect();
    }
+   public function login($email, $pass){
+        $old_query="select * from users where email='$email'";
+        $old_result=$this->db->query($old_query);
+        $result=$old_result->fetch();
+        if($result){
+            
+            $old_pass=$result['password'];
+            if(password_verify($pass, $old_pass)){
+                $_SESSION['user_auth']=$result;
+                header("location: dashboard.php");
+            }else{
+                $_SESSION['error_msg']="Authentication failed.";
+                header("location: index.php");
+            } 
+        }else{
+            $_SESSION['error_msg']="The email not found on our record.";
+            header("location: index.php");
+        }
 
+   }
    public function register($name, $email, $pass){
 
         $old_query="select email from users where email='$email'";
