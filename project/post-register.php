@@ -18,9 +18,7 @@ if(!$name){
 }elseif(!$confirm_pass){
  $_SESSION['error_msg']="The confirm password filed is required.";
     header("location: register.php");
-}
-
-if($pass != $confirm_pass){
+}else if($pass != $confirm_pass){
      $_SESSION['error_msg']="The password and confirm password must match.";
     header("location: register.php");
 }
