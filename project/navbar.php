@@ -1,4 +1,8 @@
-<?php session_start();   ?>
+<?php
+if(session_status()===PHP_SESSION_NONE){
+  session_start();  
+}
+?>
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
   <div class="container">
     <a class="navbar-brand" href="#">Project Name</a>
@@ -16,7 +20,7 @@
             <?php echo $name; ?>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="profile.php">Profile</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="logout.php">Logout</a></li>
           </ul>
