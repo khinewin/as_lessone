@@ -21,8 +21,6 @@
                     echo date("d-m-Y h:i:s A", strtotime($created_at));
                 ?>
             </li>
-
-
         </ul>
     </div>
     
